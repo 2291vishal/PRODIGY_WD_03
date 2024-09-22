@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("board.jpg");
+    background-repeat:  no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hwb(183 26% 11%);
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.winning-message {
+    
+    display: none;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.winning-message.show {
+    display: block;
+}
+
+.cell.x {
+    background-color: rgb(20, 226, 79); /* Color for X */
+    color: black;
+}
+
+.cell.circle {
+    background-color: rgb(218, 67, 2); /* Color for O */
+    color: black;
+}
